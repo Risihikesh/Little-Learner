@@ -31,16 +31,15 @@ const Navbar = () => {
     }
 
     return (
-        <div>
-            <div className="container-fluid bg-light position-relative shadow">
+        
+            <div className="container-fluid bg-light position-fixed top-0 shadow">
                 <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
                     <a
                         href=""
                         className="navbar-brand font-weight-bold text-secondary"
                         style={{ fontSize: 50 }}
                     >
-                        <i className="flaticon-047-backpack
-" />
+                        <i className="flaticon-047-backpack" />
                         <span className="text-primary">LittleLearner</span>
                     </a>
                     <button
@@ -107,7 +106,7 @@ const Navbar = () => {
                     </div>
                 </nav>
             </div>
-        </div>
+        
     );
 };
 
