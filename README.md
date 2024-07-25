@@ -33,3 +33,10 @@ A fully functional and responsive school website built with HTML, CSS, BootStrap
 npm install
 
 
+### Usage
+
+```bash
+npm run dev
+
+
+
