@@ -36,7 +36,7 @@ function Homepage (){
 
   return (
     <div className="mt-5">
-      <div className="container-fluid bg-primary px-0 mt-10 px-md-5 mb-5">
+      <div className="container-fluid bg-primary px-0  px-md-5 mb-5">
         <div className="row align-items-center px-3">
           <div className="col-lg-6 text-center text-lg-left">
             <h4 className="text-white mb-4 mt-5 mt-lg-0">

@@ -32,12 +32,12 @@ const Navbar = () => {
 
     return (
         
-            <div className="container-fluid bg-light position-fixed top-0 shadow z-3">
+            <div className="container-fluid bg-light shadow">
                 <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
                     <a
-                        href=""
+                        href="/"
                         className="navbar-brand font-weight-bold text-secondary"
-                        style={{ fontSize: 50 }}
+                        style={{ fontSize: 40 }}
                     >
                         <i className="flaticon-047-backpack" />
                         <span className="text-primary">LittleLearner</span>
@@ -45,8 +45,8 @@ const Navbar = () => {
                     <button
                         type="button"
                         className="navbar-toggler"
-                        data-toggle="collapse"
-                        data-target="#navbarCollapse"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse"
                     >
                         <span className="navbar-toggler-icon" />
                     </button>
@@ -70,7 +70,7 @@ const Navbar = () => {
                             <a href="/gallery" className="nav-item nav-link">
                                 Gallery
                             </a>
-                            <div 
+                            {/* <div 
                                 className="nav-item dropdown"
                                 onMouseOver={handleMouseOver}
                                 onMouseOut={handleMouseOut}
@@ -95,7 +95,7 @@ const Navbar = () => {
                                         Blog Detail
                                     </a>
                                 </div>
-                            </div>
+                            </div> */}
                             <a href="/contact" className="nav-item nav-link">
                                 Contact
                             </a>

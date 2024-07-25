@@ -21,19 +21,19 @@ const AboutPage = () => {
         >
           <h3 className="display-3  font-weight-bold text-white">About Us</h3>
       
-          <p className="mt-2 text-white px-10 bold">
+          <p className="mt-2 text-white  bold">
 
             Founded in 2000, our school began with a vision to create a nurturing and innovative learning environment for children. Over the years, we've grown from a small community school into a leading educational institution, dedicated to providing excellence in education.
           </p>
 
           <h3 className="display-3 mt-5 font-weight-bold text-white">Our Vision</h3>
 
-      <p className="mt-2 text-white px-10 bold">
+      <p className="mt-2 text-white  bold">
 
       To be a leading institution in fostering lifelong learning and personal development, empowering every child to achieve their fullest potential and become confident, compassionate, and successful individuals.      
           </p>
           <h3 className="display-3 mt-5 font-weight-bold text-white">Our Mission</h3>
-      <p className="mt-2 text-white px-10 bold">
+      <p className="mt-2 text-white bold">
 
       Our mission is to provide a supportive and stimulating educational environment that encourages curiosity, creativity, and critical thinking. We are committed to personalized learning, academic excellence, and holistic development, ensuring every child is prepared for future success.
           </p>
