@@ -18,16 +18,16 @@ function Footer (){
             Little Learner Learning Center is dedicated to empowering young minds with the knowledge and skills they need to succeed.
             </p>
             <div className="d-flex justify-content-start mt-4">
-              <a className="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style={{ width: 38, height: 38 }} href="#">
-                <i className="fab fa-twitter" />
+              <a className="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style={{ width: 38, height: 38 }} href="https://x.com/home" target='_blank'>
+                <i className="fab fa-x-twitter" />
               </a>
-              <a className="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style={{ width: 38, height: 38 }} href="#">
+              <a className="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style={{ width: 38, height: 38 }} href="https://www.facebook.com/" target='_blank'>
                 <i className="fab fa-facebook-f" />
               </a>
-              <a className="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style={{ width: 38, height: 38 }} href="#">
+              <a className="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style={{ width: 38, height: 38 }} href="https://www.linkedin.com/in/risihikesh/" target='_blank'>
                 <i className="fab fa-linkedin-in" />
               </a>
-              <a className="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style={{ width: 38, height: 38 }} href="#">
+              <a className="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style={{ width: 38, height: 38 }} href="https://www.instagram.com/" target='_blank'>
                 <i className="fab fa-instagram" />
               </a>
             </div>
