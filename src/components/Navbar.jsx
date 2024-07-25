@@ -32,7 +32,7 @@ const Navbar = () => {
 
     return (
         
-            <div className="container-fluid bg-light position-fixed top-0 shadow">
+            <div className="container-fluid bg-light position-fixed top-0 shadow z-3">
                 <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
                     <a
                         href=""

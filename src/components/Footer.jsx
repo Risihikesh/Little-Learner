@@ -15,8 +15,7 @@ function Footer (){
               <span className="text-white ">LittleLearner</span>
             </Navbar.Brand>
             <p>
-              Labore dolor amet ipsum ea, erat sit ipsum duo eos. Volup amet ea dolor et magna dolor, elitr rebum duo est sed diam elitr. Stet elitr
-              stet diam duo eos rebum ipsum diam ipsum elitr.
+            Little Learner Learning Center is dedicated to empowering young minds with the knowledge and skills they need to succeed.
             </p>
             <div className="d-flex justify-content-start mt-4">
               <a className="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style={{ width: 38, height: 38 }} href="#">
