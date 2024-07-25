@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 992);
@@ -34,14 +35,14 @@ const Navbar = () => {
         
             <div className="container-fluid bg-light shadow">
                 <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
-                    <a
-                        href="/"
+                    <Link
+                        to="/"
                         className="navbar-brand font-weight-bold text-secondary"
                         style={{ fontSize: 40 }}
                     >
                         <i className="flaticon-047-backpack" />
                         <span className="text-primary">LittleLearner</span>
-                    </a>
+                    </Link>
                     <button
                         type="button"
                         className="navbar-toggler"
@@ -55,21 +56,21 @@ const Navbar = () => {
                         id="navbarCollapse"
                     >
                         <div className="navbar-nav font-weight-bold mx-auto py-0">
-                            <a href="/" className="nav-item nav-link">
+                            <Link to="/" className="nav-item nav-link">
                                 Home
-                            </a>
-                            <a href="/about" className="nav-item nav-link">
+                            </Link>
+                            <Link to="/about" className="nav-item nav-link">
                                 About
-                            </a>
-                            <a href="/class" className="nav-item nav-link">
+                            </Link>
+                            <Link to="/class" className="nav-item nav-link">
                                 Classes
-                            </a>
-                            <a href="/teacher" className="nav-item nav-link">
+                            </Link>
+                            <Link to="/teacher" className="nav-item nav-link">
                                 Teachers
-                            </a>
-                            <a href="/gallery" className="nav-item nav-link">
+                            </Link>
+                            <Link to="/gallery" className="nav-item nav-link">
                                 Gallery
-                            </a>
+                            </Link>
                             {/* <div 
                                 className="nav-item dropdown"
                                 onMouseOver={handleMouseOver}
@@ -77,8 +78,8 @@ const Navbar = () => {
                                 onFocus={() => setIsDropdownOpen(true)}
                                 onBlur={() => setIsDropdownOpen(false)}
                             >
-                                <a
-                                    href="/pages"
+                                <Link
+                                    to="/pages"
                                     className="nav-link dropdown-toggle"
                                     id="navbarDropdown"
                                     role="button"
@@ -86,23 +87,23 @@ const Navbar = () => {
                                     aria-expanded={isDropdownOpen ? 'true' : 'false'}
                                 >
                                     Pages
-                                </a>
+                                </Link>
                                 <div className={`dropdown-menu${isDropdownOpen ? ' show' : ''}`} aria-labelledby="navbarDropdown">
-                                    <a href="/blog" className="dropdown-item">
+                                    <Link to="/blog" className="dropdown-item">
                                         Blog Grid
-                                    </a>
-                                    <a href="/detail" className="dropdown-item">
+                                    </Link>
+                                    <Link to="/detail" className="dropdown-item">
                                         Blog Detail
-                                    </a>
+                                    </Link>
                                 </div>
                             </div> */}
-                            <a href="/contact" className="nav-item nav-link">
+                            <Link to="/contact" className="nav-item nav-link">
                                 Contact
-                            </a>
+                            </Link>
                         </div>
-                        <a href="" className="btn btn-primary px-4">
+                        <Link to="" className="btn btn-primary px-4">
                             Login
-                        </a>
+                        </Link>
                     </div>
                 </nav>
             </div>

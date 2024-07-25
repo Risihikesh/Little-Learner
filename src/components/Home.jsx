@@ -1,3 +1,4 @@
+import { useForm } from "react-hook-form";
 import about1 from "./image/about-1.jpg";
 import about2 from "./image/about-2.jpg";
 import blog1 from "./image/blog-1.jpg";
@@ -13,14 +14,17 @@ import React, { useState, useEffect } from "react";
 
 
 function Homepage (){
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
+  const onSubmit = (data) => {
+    // Handle form submission
+    console.log(data);
+    reset();
+  };
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [classes, setClasses] = useState("");
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
   
 
   const [dataclass, setDataclass] = useState([]);
@@ -218,95 +222,95 @@ function Homepage (){
 
 
       <div className="container-fluid py-5">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-7 mb-5 mb-lg-0">
-              <p className="section-title pr-5">
-                <span className="pr-2">Book A Seat</span>
-              </p>
-              <h1 className="mb-4">Book A Seat For Your Kid</h1>
-              <p>
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-lg-7 mb-5 mb-lg-0">
+            <p className="section-title pr-5">
+              <span className="pr-2">Book A Seat</span>
+            </p>
+            <h1 className="mb-4">Book A Seat For Your Kid</h1>
+            <p>
               Secure a spot for your child in our nurturing, growth-focused environment. 
               Benefit from personalized learning and dedicated support.
-              </p>
-              <ul className="list-inline m-0">
-                <li className="py-2 lileft">
-                  <i className="fa fa-check text-success mr-3" />
-                  Nurturing environment for personalized growth.
-                </li>
-                <li className="py-2 lileft">
-                  <i className="fa fa-check text-success mr-3" />
-                  Dedicated support for each student’s success.
-                </li>
-                <li className="py-2 lileft">
-                  <i className="fa fa-check text-success mr-3" />
-                  Exceptional education with focused attention.
-                </li>
-              </ul>
-              <a href className="btn btn-primary mt-4 py-2 px-4">
-                Book Now
-              </a>
-            </div>
-            <div className="col-lg-5">
-              <div className="card border-0">
-                <div className="card-header bg-secondary text-center p-4">
-                  <h1 className="text-white m-0">Book A Seat</h1>
-                </div>
-                <div className="card-body rounded-bottom bg-primary p-5">
-                  <form>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control border-0 p-4"
-                        placeholder="Your Name"
-                        required="required"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="email"
-                        className="form-control border-0 p-4"
-                        placeholder="Your Email"
-                        required="required"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <select
-                        className="custom-select border-0 px-4"
-                        style={{ height: 47 }}
-                        onChange={(e) => setClasses(e.target.value)}
-                        value={classes}
-                      >
-                        <option selected>Select A Class</option>
-                        <option value="playschool">Play School</option>
-                        <option value="Nursery">Nursery</option>
-                        <option value="UKG">UKG</option>
-                        <option value="LKG">LKG</option>
-                        <option value="class1">Class 1</option>
-                        <option value="class2">Class 2</option>
-                        <option value="class3">Class 3</option>
-                      </select>
-                    </div>
-                    <div>
-                      <button
-                        className="btn btn-secondary btn-block border-0 py-3"
-                        type="submit"
-                        onClick={handleSubmit}
-                      >
-                        Book Now
-                      </button>
-                    </div>
-                  </form>
-                </div>
+            </p>
+            <ul className="list-inline m-0">
+              <li className="py-2 lileft">
+                <i className="fa fa-check text-success mr-3" />
+                Nurturing environment for personalized growth.
+              </li>
+              <li className="py-2 lileft">
+                <i className="fa fa-check text-success mr-3" />
+                Dedicated support for each student’s success.
+              </li>
+              <li className="py-2 lileft">
+                <i className="fa fa-check text-success mr-3" />
+                Exceptional education with focused attention.
+              </li>
+            </ul>
+            <a href="#" className="btn btn-primary mt-4 py-2 px-4">
+              Book Now
+            </a>
+          </div>
+          <div className="col-lg-5">
+            <div className="card border-0">
+              <div className="card-header bg-secondary text-center p-4">
+                <h1 className="text-white m-0">Book A Seat</h1>
+              </div>
+              <div className="card-body rounded-bottom bg-primary p-5">
+                <form onSubmit={handleSubmit(onSubmit)}>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control border-0 p-4"
+                      placeholder="Your Name"
+                      {...register('name', { required: 'Please enter your name' })}
+                    />
+                    {errors.name && <p className="help-block text-danger">{errors.name.message}</p>}
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="email"
+                      className="form-control border-0 p-4"
+                      placeholder="Your Email"
+                      {...register('email', { 
+                        required: 'Please enter your email', 
+                        pattern: { value: /^\S+@\S+$/, message: 'Invalid email address' }
+                      })}
+                    />
+                    {errors.email && <p className="help-block text-danger">{errors.email.message}</p>}
+                  </div>
+                  <div className="form-group">
+                    <select
+                      className="custom-select border-0 px-4"
+                      style={{ height: 47 }}
+                      {...register('class', { required: 'Please select a class' })}
+                    >
+                      <option value="">Select A Class</option>
+                      <option value="playschool">Play School</option>
+                      <option value="Nursery">Nursery</option>
+                      <option value="UKG">UKG</option>
+                      <option value="LKG">LKG</option>
+                      <option value="class1">Class 1</option>
+                      <option value="class2">Class 2</option>
+                      <option value="class3">Class 3</option>
+                    </select>
+                    {errors.class && <p className="help-block text-danger">{errors.class.message}</p>}
+                  </div>
+                  <div>
+                    <button
+                      className="btn btn-secondary btn-block border-0 py-3"
+                      type="submit"
+                    >
+                      Book Now
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
       <div className="container-fluid pt-5">
         <div className="container">
           <div className="text-center pb-2">

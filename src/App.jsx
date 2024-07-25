@@ -11,6 +11,7 @@ import About from './pages/About';
 import Teacher from './pages/Teachers';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import Classes from './pages/Classes';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +26,8 @@ function App() {
       <Route element={<Teacher/>} path='/teacher'/>
       <Route element={<Gallery/>} path='/gallery'/>  
       <Route element={<Contact/>} path='/contact'/>
+      <Route element={<Classes/>} path='/class'/>
+
 
     </Routes>
     </BrowserRouter>

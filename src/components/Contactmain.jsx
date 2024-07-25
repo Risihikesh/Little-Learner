@@ -3,11 +3,12 @@ import { useForm } from 'react-hook-form';
 import './Style.css';
 
 const Contactmain = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   const onSubmit = data => {
     // Handle form submission
     console.log(data);
+    reset()
   };
 
   return (
